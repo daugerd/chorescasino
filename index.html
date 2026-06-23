@@ -3,13 +3,17 @@
   <head>
     <title>Chores Wheel</title>
     <script>
-      function getRandomNumber() {
-        document.getElementById("number").innerHTML = Math.floor(Math.random() * 20) + 1;
+      function getRandomNumbers() {
+        document.getElementById("numberOne").innerHTML = Math.floor(Math.random() * 20) + 1;
+        document.getElementById("numberTwo").innerHTML = Math.floor(Math.random() * 20) + 1;
+        document.getElementById("numberThree").innerHTML = Math.floor(Math.random() * 20) + 1;
       }
     </script>
   </head>
-  <body onload="getRandomNumber()">
-    <p>Lucky number is: <span id="number"></span></p>
+  <body onload="getRandomNumbers()">
+    <p>Lucky number one is: <span id="numberOne"></span></p>
+    <p>Lucky number two is: <span id="numberTwo"></span></p>
+    <p>Lucky number three is: <span id="numberThree"></span></p>
     <ol>
       <li>Washing dishes</li>
       <li>Making bed</li>
