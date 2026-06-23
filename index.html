@@ -4,14 +4,26 @@
     <title>Chores Wheel</title>
     <script>
       function getRandomNumbers() {
-        document.getElementById("numberOne").innerHTML = Math.floor(Math.random() * 20) + 1;
-        document.getElementById("numberTwo").innerHTML = Math.floor(Math.random() * 20) + 1;
+        let numberOne = Math.floor(Math.random() * 20) + 1;
+        let numberTwo = Math.floor(Math.random() * 20) + 1;
+        document.getElementById("numberOne").innerHTML = numberOne;
+        document.getElementById("numberTwo").innerHTML = numberTwo;
+
+        if(numberOne === numberTwo) {
+          document.getElementById("numberOne").style.color = "green";
+          document.getElementById("numberTwo").style.color = "green";
+        } else {
+          document.getElementById("numberOne").style.color = "black";
+          document.getElementById("numberTwo").style.color = "black";
+        }
       }
     </script>
   </head>
   <body onload="getRandomNumbers()">
     <p>Lucky number one is: <span id="numberOne"></span></p>
     <p>Lucky number two is: <span id="numberTwo"></span></p>
+    <button onclick="getRandomNumbers()">Get New Lucky Numbers</button>
+  </body>
     <ol>
       <li>Washing dishes</li>
       <li>Making bed</li>
