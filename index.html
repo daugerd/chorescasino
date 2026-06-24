@@ -4,17 +4,21 @@
     <title>Chores Wheel</title>
     <script>
       function getRandomNumbers() {
-        let numberOne = Math.floor(Math.random() * 20) + 1;
-        let numberTwo = Math.floor(Math.random() * 20) + 1;
-        document.getElementById("numberOne").innerHTML = numberOne;
-        document.getElementById("numberTwo").innerHTML = numberTwo;
+        for(let i = 0; i < Math.floor(Math.random() * 10) + 2; i++) {
+          setTimeout(function() {
+            let numberOne = Math.floor(Math.random() * 20) + 1;
+            let numberTwo = Math.floor(Math.random() * 20) + 1;
+            document.getElementById("numberOne").innerHTML = numberOne;
+            document.getElementById("numberTwo").innerHTML = numberTwo;
 
-        if(numberOne === numberTwo) {
-          document.getElementById("numberOne").style.color = "green";
-          document.getElementById("numberTwo").style.color = "green";
-        } else {
-          document.getElementById("numberOne").style.color = "black";
-          document.getElementById("numberTwo").style.color = "black";
+            if(numberOne === numberTwo) {
+              document.getElementById("numberOne").style.color = "green";
+              document.getElementById("numberTwo").style.color = "green";
+            } else {
+              document.getElementById("numberOne").style.color = "black";
+              document.getElementById("numberTwo").style.color = "black";
+            }
+          }, i * 500);
         }
       }
     </script>
